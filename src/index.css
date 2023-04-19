@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* custom composed classes */
+.card-dashboard {
+    @apply border rounded-md bg-white/50;
+}
+
+body {
+    background-color: #fafaff;
+}
+
+.open-sidebar {
+    animation: openSidebar 500ms ease-in-out;
+}
+
+.close-sidebar {
+    transform: translateX(-100%);
+    animation: closeSidebar 500ms ease-in-out;
+}
+
+@keyframes openSidebar {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes closeSidebar {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}

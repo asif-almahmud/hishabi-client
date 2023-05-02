@@ -4,6 +4,7 @@ import AddTransaction from "./features/dashboard/pages/AddTransaction";
 import Dashboard from "./features/dashboard/pages/Dashboard";
 import History from "./features/dashboard/pages/History";
 import Settings from "./features/dashboard/pages/Settings";
+import Trends from "./features/dashboard/pages/Trends";
 import DashboardLayout from "./layouts/DashboardLayout";
 
 function App() {
@@ -11,7 +12,8 @@ function App() {
         <Routes>
             <Route
                 path="/"
-                element={<Navigate to="welcome" replace={true} />}
+                // element={<Navigate to="welcome" replace={true} />}
+                element={<Navigate to="dashboard" replace={true} />}
             />
             <Route path="welcome" element={<Welcome />} />
             <Route path="dashboard" element={<DashboardLayout />}>
@@ -20,6 +22,7 @@ function App() {
                     element={<Navigate to="dashboard" replace={true} />}
                 />
                 <Route path="dashboard" element={<Dashboard />} />
+                <Route path="trends" element={<Trends />} />
                 <Route path="history" element={<History />} />
                 <Route path="add-transaction" element={<AddTransaction />} />
                 <Route path="settings" element={<Settings />} />

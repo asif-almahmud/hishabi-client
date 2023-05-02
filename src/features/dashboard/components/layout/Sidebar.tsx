@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC, MouseEventHandler } from "react";
 import { NavLink } from "react-router-dom";
 
 const tabs = [
@@ -30,7 +30,11 @@ const tabs = [
     },
 ];
 
-const Sidebar = ({ closeModal }) => {
+interface ISideberProps {
+    closeModal?: MouseEventHandler<HTMLAnchorElement>;
+}
+
+const Sidebar: FC<ISideberProps> = ({ closeModal }) => {
     return (
         <div className="m-4">
             <ul className="flex flex-col gap-1">

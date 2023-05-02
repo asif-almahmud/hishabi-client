@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Portal from "../../../../components/ui/Portal";
 import useWindowDimensions from "../../../../hooks/useWindowDimensions";
-import Modal from "../../../../components/ui/Modal";
 import Sidebar from "./Sidebar";
 
 const Topbar = () => {
@@ -32,7 +32,8 @@ const Topbar = () => {
             </button>
             <div className="flex gap-2.5 text-gray-800">
                 <Link
-                    role="button"
+                    to="/"
+                    // role="button"
                     className="  px-3 py-2 text-sm font-medium cursor-pointer"
                     // onClick={}
                 >
@@ -45,9 +46,9 @@ const Topbar = () => {
             </div>
 
             {render && (
-                <Modal open={open} setOpen={setOpen} variant="sidebar">
+                <Portal open={open} setOpen={setOpen} variant="sidebar">
                     <Sidebar closeModal={closeModal} />
-                </Modal>
+                </Portal>
             )}
         </div>
     );

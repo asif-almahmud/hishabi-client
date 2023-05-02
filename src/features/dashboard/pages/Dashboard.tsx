@@ -30,9 +30,9 @@ const Dashboard = () => {
 
                         <div className="absolute right-2 top-2 w-5 h-5 border border-gray-400 flex justify-center items-center text-gray-400 rounded-full hover:border-gray-800 hover:text-gray-800">
                             <Tooltip
-                                text="Balance = Total Income - Total Expense + Loan - Lent
-                            - Donation + Uncharted cash in - Uncharted cash out"
-                                extraClasses="text-sm text-gray-800 bg-white/80 p-1"
+                                text="Balance = Total Income - Total Expense + Loans - Lents
+                            - Charities + Cash ins (as gift) - Cash outs (as gift)"
+                                className="text-sm p-1 w-56"
                                 time={7000}
                             >
                                 <i className="uil uil-info"></i>

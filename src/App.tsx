@@ -37,3 +37,7 @@ export default App;
 
 // transactions API -> https://my.api.mockaroo.com/transactions_db.json?key=d16c1420
 // Try with cURL -> curl -H "X-API-Key: d16c1420" https://my.api.mockaroo.com/transactions_db.json
+
+// 1
+// 2
+// 3

@@ -3,6 +3,7 @@ import Welcome from "./features/auth/pages/Welcome";
 import AddTransaction from "./features/dashboard/pages/AddTransaction";
 import Dashboard from "./features/dashboard/pages/Dashboard";
 import History from "./features/dashboard/pages/History";
+import Planner from "./features/dashboard/pages/Planner";
 import Settings from "./features/dashboard/pages/Settings";
 import Trends from "./features/dashboard/pages/Trends";
 import DashboardLayout from "./layouts/DashboardLayout";
@@ -25,6 +26,7 @@ function App() {
                 <Route path="trends" element={<Trends />} />
                 <Route path="history" element={<History />} />
                 <Route path="add-transaction" element={<AddTransaction />} />
+                <Route path="planner" element={<Planner />} />
                 <Route path="settings" element={<Settings />} />
             </Route>
         </Routes>
@@ -32,3 +34,6 @@ function App() {
 }
 
 export default App;
+
+// transactions API -> https://my.api.mockaroo.com/transactions_db.json?key=d16c1420
+// Try with cURL -> curl -H "X-API-Key: d16c1420" https://my.api.mockaroo.com/transactions_db.json
